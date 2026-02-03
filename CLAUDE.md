@@ -122,6 +122,40 @@ Always use the full curly-brace form for variable references: `${my_var}`, never
 
 ---
 
+Researching Library Documentation
+==================================
+When you need to understand how a library or framework works — its API surface, function signatures, configuration options, usage patterns, or examples — **use the internet**. Search the web or fetch the library's official documentation directly.
+
+**Do not grep through local package caches or installed dependency files** to learn a library's API. Local module directories (e.g., `~/go/pkg/mod/`, `node_modules/`, Python's `site-packages/`, etc.) contain implementation details, vendored dependencies, and internal code that is not designed to be read as documentation. Searching these directories produces noisy, misleading, and incomplete results.
+
+### What to do instead
+
+- **Search the web** for the library's official documentation, README, or API reference
+- **Fetch the documentation URL directly** if you know it (e.g., `pkg.go.dev` for Go, `docs.rs` for Rust, PyPI/ReadTheDocs for Python, npm docs for JavaScript)
+- **Read the library's GitHub README or wiki** for usage examples and getting-started guides
+
+### Why this matters
+
+Local package files are source code, not documentation. They lack the context, explanations, and curated examples that official docs provide. Grepping through them wastes time, produces unreliable results, and often leads to using internal or deprecated APIs that are not part of the library's public contract.
+
+### Examples
+
+**Incorrect — grepping local package cache:**
+```
+ls ~/go/pkg/mod/modernc.org/sqlite@v1.44.3/ | grep -E "\.go$" | grep -i driver
+grep -r "func.*Open" node_modules/better-sqlite3/
+find ~/.local/lib/python3.12/site-packages/requests/ -name "*.py" | xargs grep "def get"
+```
+
+**Correct — using the internet:**
+```
+# Search the web for the library's documentation
+# Fetch the official docs page directly (e.g., pkg.go.dev/modernc.org/sqlite)
+# Read the library's GitHub README for usage examples
+```
+
+---
+
 Handling Ambiguity and Uncertainty
 ==================================
 - If a request contains undefined terms, conflicting requirements, missing parameters, or underspecified success criteria — pause and ask before proceeding.
