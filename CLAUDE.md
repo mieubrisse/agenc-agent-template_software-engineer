@@ -22,6 +22,19 @@ Git Workflow
 - Write concise commit messages that explain *why* the change was made, not just *what* changed
 - Do not bundle unrelated changes into a single commit
 
+### Pushing
+
+Push freely to the branch you are working on. Do not wait for permission or confirmation. Push at logical checkpoints — such as after completing a coherent unit of work or before stepping away — rather than after every individual commit.
+
+### Branch cleanup after merge
+
+When a branch has been successfully merged into the default branch and the merge has been pushed to the remote, delete the now-merged branch both locally and from the remote:
+
+1. Delete the local branch: `git branch -d <branch-name>`
+2. Delete the remote branch: `git push origin --delete <branch-name>`
+
+Do not leave stale merged branches behind. Clean up immediately after a successful merge.
+
 ---
 
 Before You Start
