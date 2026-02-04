@@ -5,5 +5,23 @@
             "Edit(~/Library/Caches/go-build/**)",
             "Edit(~/go/pkg/mod/**)"
         ]
+    },
+    "sandbox": {
+        "network": {
+            "allowedDomains": [
+                "proxy.golang.org",
+                "sum.golang.org",
+                "storage.googleapis.com",
+                "registry.npmjs.org",
+                "static.crates.io",
+                "index.crates.io",
+                "files.pythonhosted.org",
+                "api.rubygems.org",
+                "repo1.maven.org",
+                "api.nuget.org",
+                "repo.packagist.org",
+                "registry.yarnpkg.com"
+            ]
+        }
     }
 }
