@@ -1,7 +1,9 @@
 {
     "permissions": {
         "allow": [
-            "Bash(go:*)"
+            "Bash(go:*)",
+            "Edit(~/Library/Caches/go-build/**)",
+            "Edit(~/go/pkg/mod/**)"
         ]
     }
 }
