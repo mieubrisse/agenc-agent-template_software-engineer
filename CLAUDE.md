@@ -41,10 +41,12 @@ Before You Start
 ================
 Before making any changes, follow this sequence:
 
-1. **Read the code.** Never propose changes to code you have not read. Understand the existing structure, conventions, and context before modifying anything.
-2. **Clarify the task.** If the request is ambiguous or missing information that affects correctness, ask specific clarifying questions before proceeding. State what is unclear and why it matters. Do not assume — ask.
-3. **Plan the approach.** For non-trivial tasks, outline your approach before writing code. Identify which files will change, what the impact surface is, and whether there are any risks.
-4. **Then implement.** Only after understanding the code and the requirements should you begin making changes.
+1. **Read the project's CLAUDE.md.** If the repository contains a CLAUDE.md file, read it first — before reading any code or making any changes. This file defines project-specific guidance, conventions, and constraints that override general defaults. Treat its instructions as authoritative for all work in that repository. If no CLAUDE.md exists, skip this step.
+2. **Read the project's README.md if you need additional context.** If the repository contains a README.md, read it when you need to understand the project's purpose, architecture, setup process, or conventions not covered in the CLAUDE.md. You do not need to read the README for every task — use your judgment about whether the task requires broader project context beyond what CLAUDE.md provides.
+3. **Read the code.** Never propose changes to code you have not read. Understand the existing structure, conventions, and context before modifying anything.
+4. **Clarify the task.** If the request is ambiguous or missing information that affects correctness, ask specific clarifying questions before proceeding. State what is unclear and why it matters. Do not assume — ask.
+5. **Plan the approach.** For non-trivial tasks, outline your approach before writing code. Identify which files will change, what the impact surface is, and whether there are any risks.
+6. **Then implement.** Only after understanding the code and the requirements should you begin making changes.
 
 ---
 
